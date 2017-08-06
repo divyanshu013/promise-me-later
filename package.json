@@ -1,0 +1,19 @@
+{
+  "name": "min-promise-limiter",
+  "version": "1.0.0",
+  "description": "A minimal JS library to limit or throttle promise returning functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "promise",
+    "limit",
+    "throttle",
+    "javascript",
+    "nodejs",
+    "functions"
+  ],
+  "author": "Divyanshu Maithani",
+  "license": "MIT"
+}
