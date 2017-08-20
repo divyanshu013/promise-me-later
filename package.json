@@ -1,11 +1,12 @@
 {
-  "name": "min-promise-limiter",
+  "name": "promise-me-later",
   "version": "1.0.0",
   "description": "A minimal JS library to limit or throttle promise returning functions",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir lib --minified"
+    "build": "babel src --out-dir lib --minified --presets=es2015",
+    "umd": "babel src --out-dir umd --plugins transform-es2015-modules-umd --minified --presets=es2015"
   },
   "keywords": [
     "promise",
@@ -19,6 +20,17 @@
   "author": "Divyanshu Maithani <div.blackcat@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.24.1"
-  }
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/divyanshu013/promise-me-later/issues"
+  },
+  "homepage": "https://github.com/divyanshu013/promise-me-later"
 }
