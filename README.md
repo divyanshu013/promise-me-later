@@ -13,3 +13,6 @@ When you need to limit any promise returning function call rate but still want e
 This can be extending to any promise returning function
 
 WIP - Basic tests passing, need to do some more tests...
+## Motivation
+
+## Usage
