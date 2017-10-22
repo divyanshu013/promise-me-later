@@ -15,4 +15,6 @@ This can be extending to any promise returning function
 WIP - Basic tests passing, need to do some more tests...
 ## Motivation
 
+Why not node-rate-limiter or bluebird queue
+
 ## Usage
