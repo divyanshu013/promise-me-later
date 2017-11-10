@@ -1,3 +1,5 @@
+const test = require('ava');
+
 const altThrottle = require('../src/index');
 let bm = 'yo';
 const obj = {
