@@ -1,6 +1,6 @@
 # promise-me-later
 
-A minimal, vanilla JS library to throttle/rate-limit fetch, API calls and other promise returning functions :recycle:
+A minimal, vanilla JS library to throttle/rate-limit `fetch`, API calls and other promise returning functions :recycle:
 
 ```bash
 npm i promise-me-later

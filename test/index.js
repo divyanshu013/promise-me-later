@@ -1,30 +1,22 @@
 const test = require('ava');
+const promiseMeLater = require('../src/index');
 
-const altThrottle = require('../src/index');
-let bm = 'yo';
-const obj = {
-  bm: 'hi',
-  gg() {
-    console.log('this')
-  }
-}
-
-let inflight = 0;
-
-setInterval(() => inflight = 0, 300)
-
-const delay = () => {
-	inflight++;
-	console.log('inflight', inflight)
-	return (
-	  new Promise((resolve, reject) => {
-	    setTimeout(resolve, Math.random() * 100)
-	  })
-	);
-};
-
-const saygg = altThrottle(delay, 2, 300);
-// const saygg = obj.gg
-for (var i = 0; i < 100; i++) {
-	setTimeout(saygg, Math.random() * 200);
-}
+test('Limit 1 call per 1000ms', (t) => {
+	let inflight = 0;
+	t.plan(10);
+	const delay = () => new Promise((resolve) => {
+		console.log('will resolve');
+		inflight += 1;
+		t.truthy(inflight <= 1, 'Within limit');
+		console.log(inflight)
+		setTimeout(() => {
+			console.log('resolved');
+			inflight -= 1;
+			resolve();
+		}, 1000);
+	});
+	const limitDelay = promiseMeLater(delay, 1, 1000);
+	for (let i = 0; i < 10; i += 1) {
+		limitDelay();
+	}
+});
