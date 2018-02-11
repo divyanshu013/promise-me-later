@@ -9,7 +9,7 @@
 	],
   "scripts": {
     "test": "ava test/index.js -v",
-    "prepublish": "npm run test && npm run build",
+    "prepublish": "npm run test && npm run build && npm run umd",
     "build": "babel src --out-dir lib --minified --presets=es2015",
     "umd": "babel src --out-dir umd --plugins transform-es2015-modules-umd --minified --presets=es2015"
   },
