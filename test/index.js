@@ -1,22 +1,26 @@
 const test = require('ava');
 const promiseMeLater = require('../src/index');
+let inflight = 0;
 
-test('Limit 1 call per 1000ms', (t) => {
-	let inflight = 0;
-	t.plan(10);
-	const delay = () => new Promise((resolve) => {
-		console.log('will resolve');
-		inflight += 1;
-		t.truthy(inflight <= 1, 'Within limit');
+const fn = () => new Promise((res, rej) => {
+	console.log('Waiting for promise to resolve');
+	inflight += 1;
+	console.log(inflight);
+	setTimeout(() => {
+		res()
+		console.log('Promise resolved')
+		inflight -= 1;
 		console.log(inflight)
-		setTimeout(() => {
-			console.log('resolved');
-			inflight -= 1;
-			resolve();
-		}, 1000);
-	});
-	const limitDelay = promiseMeLater(delay, 1, 1000);
-	for (let i = 0; i < 10; i += 1) {
-		limitDelay();
+	}, 3000 + (Math.random() * 100));
+});
+
+const throttled = promiseMeLater(fn, 2, 1000);
+
+test('Limit 1 call per 1000ms', async (t) => {
+	const p = [];
+	for (let index = 0; index < 5; index += 1) {
+		p.push(throttled());
 	}
+	await Promise.all(p);
+	t.pass();
 });
