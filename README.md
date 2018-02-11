@@ -2,6 +2,10 @@
 
 A minimal, vanilla JS library to throttle/rate-limit `fetch`, API calls and other promise returning functions :recycle:
 
+![Version](https://img.shields.io/npm/v/promise-me-later.svg)
+![Build](https://img.shields.io/travis/divyanshu013/promise-me-later.svg)
+![Downloads](https://img.shields.io/npm/dt/promise-me-later.svg)
+
 ## When to use
 When you need to limit any promise returning function call rate but still want each call to happen over time. For example, a good use case for this is to limit calling APIs from `fetch` in browser or `node-fetch` in node environment.
 
