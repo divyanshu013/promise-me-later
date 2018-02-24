@@ -1,6 +1,6 @@
 {
   "name": "promise-me-later",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A minimal JS library to limit or throttle promise returning functions",
   "main": "lib/index.js",
   "files": [
