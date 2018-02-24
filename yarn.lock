@@ -517,6 +517,18 @@ babel-plugin-espower@^2.3.2:
     espurify "^1.6.0"
     estraverse "^4.1.1"
 
+babel-plugin-rename-assigned-properties@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-rename-assigned-properties/-/babel-plugin-rename-assigned-properties-1.0.0.tgz#cdb7750fa22fc8be14a30106aa3e4907b1b48eed"
+  dependencies:
+    babel-runtime "^6.11.6"
+
+babel-plugin-rename-umd-globals@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-rename-umd-globals/-/babel-plugin-rename-umd-globals-1.0.0.tgz#84e152dc1e8dd785b6aef688c1dedd9163b9a256"
+  dependencies:
+    babel-plugin-rename-assigned-properties "^1.0.0"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -779,7 +791,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:

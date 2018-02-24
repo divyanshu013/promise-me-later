@@ -2,11 +2,11 @@
   "name": "promise-me-later",
   "version": "1.0.2",
   "description": "A minimal JS library to limit or throttle promise returning functions",
-	"main": "lib/index.js",
-	"files": [
-		"lib/",
-		"umd/"
-	],
+  "main": "lib/index.js",
+  "files": [
+    "lib/",
+    "umd/"
+  ],
   "scripts": {
     "test": "ava test/index.js -v",
     "prepublish": "npm run test && npm run build && npm run umd",
@@ -27,6 +27,7 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "babel-cli": "^6.24.1",
+    "babel-plugin-rename-umd-globals": "^1.0.0",
     "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^4.9.0",

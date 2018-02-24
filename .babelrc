@@ -1,0 +1,7 @@
+{
+	"plugins": [
+	  ["rename-umd-globals", {
+		"index": "PromiseMeLater"
+	  }]
+	]
+  }
