@@ -43,6 +43,11 @@ const limitFetch = promiseMeLater(fetch, 2, 1000);
 
 ### As a UMD
 
+Get the latest UMD from:
+
+```bash
+https://unpkg.com/promise-me-later/umd/index.js
+```
 
 ## Motivation
 
